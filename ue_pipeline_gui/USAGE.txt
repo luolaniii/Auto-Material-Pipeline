@@ -1,0 +1,44 @@
+UE Pipeline GUI - 使用说明
+============================
+
+【1. 第一次使用】
+  ① 双击 UEPipelineGUI.exe 打开窗口
+  ② 点右下角“设置”，填写：
+      - Blender 可执行文件 (blender.exe)
+      - UnrealEditor-Cmd.exe   （通常在 UE 安装目录 Engine/Binaries/Win64/）
+      - .uproject 文件
+      - 材质 JSON 根目录       （游戏资源解包出来的目录）
+      - 贴图根目录             （通常和材质同目录，可留空 = 同上）
+      - Blender 流水线脚本     （指向 ue_obj_to_glb_pipeline.py）
+  ③ 点“确定”，配置自动保存到 config.json
+
+【2. 选择模型】
+  · 把 .obj / .fbx / .glb / .gltf 文件拖进窗口，或点上方“添加文件 / 添加目录”
+  · 表格会立即显示：UV 套数、UV 名称、单位（米/厘米）、顶点数、面数
+  · UV 套数=0 标红，UV 套数≥2 标绿，单位“未知”标黄
+
+【3. 处理模型 - 选中后点底部按钮】
+  · “在 Blender 中打开”     —— 弹出 Blender GUI，模型已导入，方便美术查看
+  · “Blender 完整流水线”    —— 后台启动 Blender headless，跑原 OBJ→GLB 流水线
+                              （自动找贴图、连接 BSDF、UV/法线/导出）
+  · “导入 UE (仅模型)”      —— 启动 UE，把模型批量导入到 /Game/Imports
+  · “导入 UE + 完整材质”    —— 同上，并自动找材质 JSON + 贴图、创建材质并连接
+
+【4. 列表上方工具栏】
+  · 添加文件 / 添加目录
+  · 移除选中 / 清空列表
+  · 重新解析选中 （改了文件后重新读 UV/单位）
+
+【5. 常见问题】
+  Q: 表格里 UV 套数显示 0 是怎么回事？
+  A: OBJ 没有 vt 行；FBX 是二进制且没找到 LayerElementUV。建议在 Blender 里打开
+     重新导出。
+
+  Q: FBX 单位显示“未知”？
+  A: 老版本 FBX 没写 UnitScaleFactor。建议在 Blender 导出时勾“Apply Unit”。
+
+  Q: UE 导入时报“项目锁定”？
+  A: 关掉正在运行的 UE Editor 再点导入。
+
+  Q: Blender 完整流水线没看到处理结果？
+  A: 检查新弹出的命令行窗口；输出文件在 [材质根目录]/_GUI_PipelineOutput/
