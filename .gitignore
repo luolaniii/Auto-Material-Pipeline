@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local configuration
+ue_pipeline_gui/config.json
+
+# Logs and runtime output
+*.log
+logs/
+thumbnails/
+_GUI_PipelineOutput/
+ExportedGLB_FromOBJ/
+export_progress.json
+processing_checkpoint.json
+detailed_processing.log
+file_index.csv
+file_index_json.csv
+
+# PyInstaller and build output
+ue_pipeline_gui/build/
+ue_pipeline_gui/dist/
+*.spec.bak
+
+# IDE and OS metadata
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini

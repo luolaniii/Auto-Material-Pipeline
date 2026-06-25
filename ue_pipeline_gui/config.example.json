@@ -1,9 +1,9 @@
 {
-    "blender_exe": "E:/Software/Blender/blender.exe",
-    "ue_editor_exe": "E:/Software/UE/UE_5.4/Engine/Binaries/Win64/UnrealEditor-Cmd.exe",
-    "ue_project": "E:/Projects/UE/FF7/FF7.uproject",
+    "blender_exe": "C:/Program Files/Blender Foundation/Blender 4.0/blender.exe",
+    "ue_editor_exe": "D:/UnrealEngine/UE_5.4/Engine/Binaries/Win64/UnrealEditor-Cmd.exe",
+    "ue_project": "D:/Projects/Unreal/MyProject/MyProject.uproject",
     "ue_content_root": "/Game/Imports",
-    "pipeline_script": "E:/Projects/UE/脚本/ue_obj_to_glb_pipeline.py",
+    "pipeline_script": "D:/Projects/Auto-Material-Pipeline/ue_obj_to_glb_pipeline.py",
     "default_unit": "centimeter",
     "obj_assumed_unit": "meter",
     "obj_orientation": "x_m90",
@@ -21,7 +21,7 @@
     "flexible_tokens": "",
     "bad_texture_tokens": "",
     "best_match_basecolor_tokens": "",
-    "unity_exe": "D:/Unity/Unity 2023.2.20f1/Editor/Unity.exe",
-    "unity_project": "E:/Projects/Unity/Test_Python",
+    "unity_exe": "C:/Program Files/Unity/Hub/Editor/2023.2.20f1/Editor/Unity.exe",
+    "unity_project": "D:/Projects/Unity/MyProject",
     "unity_assets_subdir": "Imports"
 }
