@@ -105,15 +105,3 @@ build.bat
 ```
 
 打包输出位于 `ue_pipeline_gui/dist/`，中间文件位于 `ue_pipeline_gui/build/`。这些目录是生成物，不提交到源码仓库。
-
-## 仓库内容说明
-
-本仓库保留源码、脚本、示例配置和使用说明。以下内容不应提交：
-
-- `__pycache__` 和 `.pyc`
-- `ue_pipeline_gui/build/`
-- `ue_pipeline_gui/dist/`
-- 本机 `ue_pipeline_gui/config.json`
-- 运行日志、缩略图缓存和流水线输出目录
-
-如果需要分发可执行文件，建议单独打包发布，不要把 PyInstaller 输出目录直接提交到源码分支。
